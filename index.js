@@ -155,8 +155,44 @@
 // console.log("Высота окна браузера: " + window.innerHeight + " пикселей");
 
 
-document.getElementById('Button').addEventListener('click', function() {
-    let first = document.querySelector('.first');
-    first.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+// document.getElementById('Button').addEventListener('click', function() {
+//     let first = document.querySelector('.first');
+//     first.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+// });
+
+let inp1 = document.getElementById("inp1");
+let inp2 = document.getElementById("inp2");
+let inp3 = document.getElementById("inp3");
+let p1 = document.getElementById("info1");
+let p2 = document.getElementById("info2");
+let p3 = document.getElementById("info3");
+
+inp1.addEventListener("input", ()=>{
+  if (inp1.value.length <= 8) {
+    p1.innerHTML = "Введите текст длиной больше 8ми";
+    p1.style.color = "red";
+  } else {
+    p1.innerHTML = "Данные верны";
+    p1.style.color = "green";
+  }
 });
 
+inp2.addEventListener("input", ()=>{
+  if (inp2.value.length <= 8) {
+    p2.innerHTML = "Введите текст длиной больше 8ми";
+    p2.style.color = "red";
+  } else {
+    p2.innerHTML = "Данные верны";
+    p2.style.color = "green";
+  }
+});
+
+inp3.addEventListener("input", ()=>{
+  if (inp3.value.length <= 8) {
+    p3.innerHTML = "Введите текст длиной больше 8ми";
+    p3.style.color = "red";
+  } else {
+    p3.innerHTML = "Данные верны";
+    p3.style.color = "green";
+  }
+});
